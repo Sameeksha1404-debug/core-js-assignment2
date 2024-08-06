@@ -1,0 +1,99 @@
+core js assignment-2
+---------------------------------------
+const square=(n)=>n*n
+const numsquar=square(5)
+console.log(numsquar)
+------------------------------------------
+2.
+const ages=[10,24,6,2,1,5]
+const sa=ages.sort((a,b)=>a-b)
+console.log(sa)
+console.log(ages)
+
+
+let media_age;
+if(ages.length%2===0){
+    const m1=ages[(ages.length/2)-1]
+    const m2=ages[(ages.length/2)]
+    media_age=(m1+m2)/2
+    
+}else{
+    media_age=ages[Math.floor(ages.length/2)]
+}
+console.log(media_age)
+----------------------------------------
+const sum=ages.reduce((prev,curr)=>prev+curr)
+const avg=sum/ages.length
+console.log(avg)
+-------------------------------------------
+const minDiff=Math.abs(ages[0]-avg)
+const maxDiff=Math.abs(ages[ages.length-1]-avg)
+
+console.log(minDiff)
+console.log(maxDiff)
+
+----------------------------------------------------
+3.
+//Ceate a Map to stoe contact infomation (name, age, email, location) and implement a function to
+//retieve contact details by name
+
+Map(4) {
+  'name' => 'sameeksha',
+  'email' => 'sam123@gmail.com',
+  'age' => 19,
+  'location' => 'Indore'
+}
+
+const map= new Map()
+
+
+map.set("name","sameeksha")
+map.set("email","sam123@gmail.com")
+map.set("age",19)
+map.set("location","Indore")
+console.log(map)
+
+---------------------------------------------------------------------------
+4
+const p1={name:"sam",age:25}
+const p2={name:"bob",age:30}
+
+function introduce(){
+console.log(`hello, I am ${this.name}, and I am ${this.age}years old.`)
+}
+introduce.call(p2) 
+-------------------------------------------------------------------
+5.
+let uniqueNumbers=new Set([1,3,4,2,6,5])
+
+let numberSqMap=new Map();
+ uniqueNumbers.forEach(number=>{
+numberSqMap.set(number,number*number)})
+
+
+console.log("unique numbers:")
+console.log(Array.from(uniqueNumbers).join(",")):
+
+console.log('\nnumber-square-map:');
+numberSqMap.forEach(number,square=>{
+console.log(`${number}:${square});
+});
+---------------------------------------------------------------------------
+6.
+function dispalyInfo(name,role){
+console.log(`hello ${name}:${role}`)
+
+displayInfo.call(null,"prabhir","developer")
+
+displayInfo.apply(null,["Sameeksha","Student"]
+
+function greet(){
+console.log(`hello ${name}:${role}`)
+}
+
+const user={name:"sameeksha"}
+const boundGreet=greet.bind(user)
+boundGreet();
+--------------------------------------------------------------------------
+
+
